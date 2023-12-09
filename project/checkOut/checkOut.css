@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif!important;
+    color: #111011;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/* FORM */
+.checkoutForm__content{
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 40px 200px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.checkoutForm__content a img{
+    margin-bottom: 20px;
+}
+.checkoutForm__content h2{
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+.deliveryForm{
+    padding: 20px 0;
+    display: flex;
+    gap: 40px;
+}
+.form{
+    width: 50%;
+    padding-right: 80px;
+}
+.info{
+    width: 50%;
+}
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #f3f3f3;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+  }
+
+  .btn{ 
+    background-color: #FFFFFF;
+    border: 1px solid gray;
+    padding: 15px 20px;
+    transition: 1s;
+    cursor: pointer;
+}
+.btn:hover{
+    border: none;
+    background-color: #111011;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.method{
+    height: 64px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.payment img{
+    margin-right: 12px;
+}
+input[type="radio"] {
+    accent-color: #101010;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+.label{
+    margin-left: 20px;
+}

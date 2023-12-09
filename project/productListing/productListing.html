@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./productListing.css">
+    <title>Product Listing</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <section class="header">
+        <div class="header__content">
+            <ul>
+                <li onclick="shownav()"><img src="../tramanhstore//images/List-black.png" alt="menu"></li>
+                <li><a href="">Menu</a></li>
+            </ul>
+            <a href="../homepage/home.html"><img src="../tramanhstore//images/logo-black.png" alt="logo">
+            <ul>
+                <li><a href="">Login</a></li>
+                <li><a href="../listCart/listCart.html">Cart (<span class="total"><b>0</b></span>)</a></li>
+            </ul>
+        </div>
+        <!-- Menu -->
+        <div class="menu">
+            <button onclick="closenav()"><img src="../tramanhstore/images/X.png" alt="">Đóng</button>
+            <button>The Power of Intention</button>
+            <button>All the Basic</button>
+            <button>Về chúng tôi</button>
+            <button>Liên hệ chúng tôi</button>
+        </div>
+    </section>
+    <!-- FILTER -->
+    <section class="filter">
+        <hr>
+        <ul class="nav" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">All</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">All time Basic</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">The Power of Intention</button>
+            </li>
+        </ul>
+        <hr>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <!-- PRODUCT -->
+                <section class="productList">
+                    <div class="productList__content render_content">
+                    
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="productList">
+                    <div class="all-time productList__content">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <div class="productList">
+                    <div class="the-power productList__content">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- FOOTER -->
+    <section class="footer">
+        <div class="footer__content">
+            <!-- Content Left -->
+        <div class="contentLeft">
+            <h3>HỖ TRỢ</h3>
+            <div class="footer_link">
+                <ul>
+                    <li><a href="">Chăm sóc khách hàng</a></li>
+                    <li><a href="">Hướng dẫn đặt hàng</a></li>
+                    <li><a href="">Hướng dẫn chọn size</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Content Mid -->
+        <div class="contentMid">
+            <img src="../tramanhstore/images/logo.png" alt="logo">
+            <div class="footer_link">
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/pqtjAkcCLdAU4W519" target="_blank">58/13 Đông Hưng Thuận 10, P, Quận 12, TP.HCM</a></li>
+                    <li><a href="tel: 0931 831 858">0931 831 858</a></li>
+                    <li><a href="mailto: cskh@tramanhstore.com.vn">cskh@tramanhstore.com.vn</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Content Right -->
+        <div class="contentRight">
+            <h3>ĐƠN HÀNG & HOÀN TRẢ</h3>
+            <div class="footer_link">
+                <ul>
+                    <li><a href="">Tra cứu đơn</a></li>
+                    <li><a href="">Thông tin vận chuyển</a></li>
+                    <li><a href="">Chính sách hoàn trả</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>© 2023 tramanhstore. All Rights Reserved.</p>
+            <p>Người sở hữu Website: Trần Ức Minh - SĐT: 0907 407 900 - Mã số thuế cá nhân: 8526200327 - Ngày cấp: 16/04/2018 - Nơi cấp: Chi cục Thuế Quận 12</p>
+        </div>
+    </section>
+
+    <script src="./productListing.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
