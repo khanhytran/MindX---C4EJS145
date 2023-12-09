@@ -26,6 +26,7 @@ for(let i=0; i<trendingProducts.length; i++){
             <p>${trendingProducts[i].nameProduct}</p>
             <p class="price">${trendingProducts[i].price + 'VND'}</p>
         </a>
+        <button onclick="addToCart(${i})" class="btn">Add to cart</button>
     </div>
     `
 }
@@ -70,4 +71,39 @@ window.addEventListener('scroll', function (event) {
   function detailItem(i){
     console.log[i]
     localStorage.setItem('detailProduct', JSON.stringify(dataProduct[i]))
+}
+
+// ADD TO CART
+let listCart = []
+
+function addToCart(i){
+    let flag = false
+    let index=-1
+    console.log(listCart)
+    for (let j=0; j<listCart.length; j++){
+        if(dataProduct[i].id == dataProduct[j].id){
+            flag=true
+            index=j
+        }
+    }
+    // check
+    if(flag){
+        listCart[index].sl++
+    }else{
+        let cartitem={
+            sl:1,
+            item: dataProduct[i]
+        }
+        listCart.push(cartitem)
+    }
+
+    console.log(listCart)
+    let jsonaddToCart=JSON.stringify(listCart)  // chuyen tu mang ve string 
+    localStorage.setItem('listCart', jsonaddToCart)  // luu vao loacal storage 
+
+    // Show listCart:
+    let listCartJson = localStorage.getItem("listCart");
+    listCart = JSON.parse(listCartJson);
+
+    document.querySelector('.total').innerHTML = listCart.length
 }

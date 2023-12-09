@@ -85,6 +85,9 @@ body{
     font-weight: bold;
     cursor: pointer;
 }
+.total{
+    color: #FFFFFF;
+}
 /* BANNER */
 .banner{
     width: 100%;
@@ -358,6 +361,21 @@ body{
     font-weight: 700;
     font-size: 16px;
     margin-top: 10px;
+}
+.btn{
+    background-color: #FFFFFF;
+    border-radius: 0;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    margin-top: 15px;
+    transition: 1s;
+    cursor: pointer;
+}
+.btn:hover{
+    border: none;
+    background-color: #111011;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 /* FOOTER */
 .footer{
