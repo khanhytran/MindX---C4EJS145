@@ -36,11 +36,46 @@ let info = `
         <p>SKU: ${detailItem.SKU}</p>
         <p>Category: ${detailItem.category}</p>
         <p>Tags: ${detailItem.tags}</p>
-        <button onclick="addToCart(${i})" class="btn btn-success>Add to Cart</button>
+        <button onclick="addToCart(${detailItem.id})" class="btn">Add to Cart</button>
     </div> 
     `
 let productInfo=document.querySelector(".productInfo")
 productInfo.innerHTML=info
+
+// ADD TO CART
+let listCart = []
+
+function addToCart(i){
+    let flag = false
+    let index=-1
+    console.log(listCart)
+    for (let j=0; j<listCart.length; j++){
+        if(dataProduct[i].id == dataProduct[j].id){
+            flag=true
+            index=j
+        }
+    }
+    // check
+    if(flag){
+        listCart[index].sl++
+    }else{
+        let cartitem={
+            sl:1,
+            item: dataProduct[i]
+        }
+        listCart.push(cartitem)
+    }
+
+    console.log(listCart)
+    let jsonaddToCart=JSON.stringify(listCart)  // chuyen tu mang ve string 
+    localStorage.setItem('listCart', jsonaddToCart)  // luu vao loacal storage 
+
+    // Show listCart:
+    let listCartJson = localStorage.getItem("listCart");
+    listCart = JSON.parse(listCartJson);
+
+    document.querySelector('.total').innerHTML = listCart.length
+}
 
 // MENU TRANSACTION
 function shownav(){
@@ -55,7 +90,7 @@ function closenav(){
 // RECOMMEND ITEMS:
 let dataProductJson = localStorage.getItem("dataProduct");
 let dataProduct = JSON.parse(dataProductJson);
-console.log(dataProduct)
+
 
 let item="";
 for(let i=0; i<dataProduct.length; i++){

@@ -15,6 +15,7 @@ body{
 .logo{
     height: 30px;
 }
+
 /* FORM */
 .checkoutForm__content{
     background-color: #FFFFFF;
@@ -32,13 +33,21 @@ body{
     padding-bottom: 20px;
 }
 .deliveryForm{
+    width: 100%;
     padding: 20px 0;
     display: flex;
     gap: 40px;
 }
 .form{
-    width: 60%;
+    width: 100%;
     padding-right: 20px;
+}
+.delivery{
+    width: 100%;
+}
+.form h3{
+    font-size: 18px;
+    margin: 20px 0;
 }
 input[type=text] {
     width: 100%;
@@ -48,7 +57,6 @@ input[type=text] {
     border: 1px solid #d7d7d7;
     border-radius: 3px;
   }
-
 .btn{ 
     background-color: #FFFFFF;
     border: 1px solid gray;
@@ -68,7 +76,6 @@ input[type=text] {
     -webkit-box-align: center;
     align-items: center;
 }
-
 .payment img{
     margin-right: 12px;
 }
@@ -84,7 +91,7 @@ input[type="radio"] {
 
 /* PRODUCT INFO */
 .info{
-    width: 30%;
+    width: 40%;
     height: 100%;
     border: 1px solid #111011;
     padding: 20px;

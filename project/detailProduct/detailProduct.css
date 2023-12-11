@@ -166,6 +166,7 @@ body{
     max-width: 1920px;
     margin: auto;
     text-align: start;
+    gap: 10px;
 }
 .contentItem{
     margin-top: 20px;
@@ -190,7 +191,21 @@ body{
     font-size: 16px;
     margin-top: 10px;
 }
-
+.btn{
+    background-color: #FFFFFF;
+    border-radius: 0;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    margin-top: 15px;
+    transition: 1s;
+    cursor: pointer;
+}
+.btn:hover{
+    border: none;
+    background-color: #111011;
+    color: #FFFFFF;
+    cursor: pointer;
+}
 /* FOOTER */
 .footer{
     padding: 40px 0;
