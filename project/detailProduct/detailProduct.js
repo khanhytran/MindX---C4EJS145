@@ -43,7 +43,7 @@ let productInfo=document.querySelector(".productInfo")
 productInfo.innerHTML=info
 
 // ADD TO CART
-let listCart = []
+let listCart = [] 
 
 function addToCart(i){
     let flag = false

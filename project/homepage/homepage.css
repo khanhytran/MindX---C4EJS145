@@ -85,6 +85,9 @@ body{
     font-weight: bold;
     cursor: pointer;
 }
+.header__content ul li a b{
+    color: #FFFFFF;
+}
 .total{
     color: #FFFFFF;
 }
@@ -650,7 +653,7 @@ body{
         margin: 0 20px;
     }
     .contentItem{
-        width: 100%;
+        width: 48%;
         height: 100%;
     }
     .contentItem img{
