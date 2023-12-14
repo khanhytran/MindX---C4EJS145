@@ -26,8 +26,3 @@ function render(){
 }
 
 render()
-
-function order(){
-    return alert(`Đặt hàng thành công! 
-Cảm ơn bạn đã lựa chọn Trâm Anh Store.`)
-}

@@ -73,9 +73,17 @@ function detailItem(i){
     localStorage.setItem('detailProduct', JSON.stringify(dataProduct[i]))
 }
 // ADD TO CART
-let listCart = []
+// dòng này để reset local
+// let listCart = []
 
 function addToCart(i){
+    let listCart
+    if(JSON.parse(localStorage.getItem("listCart")).length!=0){
+       listCart = JSON.parse(localStorage.getItem("listCart"))
+    }
+    else{
+        listCart = 0
+    }
     let flag = false
     let index=-1
     console.log(listCart)
@@ -94,7 +102,6 @@ function addToCart(i){
             item: dataProduct[i]
         }
         listCart.push(cartitem)
-        alert("Đã thêm sản phẩm vào giỏ hàng!")
     }
 
     console.log(listCart)
