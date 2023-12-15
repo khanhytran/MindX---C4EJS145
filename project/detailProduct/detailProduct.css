@@ -113,9 +113,13 @@ body{
 }
 .imgFilter img{
     width: 100%;
+    cursor: pointer;
 }
 .imgShow{
-    width: 45%;
+    width: 40%;
+}
+.imgMain{
+    width: 100%;
 }
 .img img{
     width: 100%;

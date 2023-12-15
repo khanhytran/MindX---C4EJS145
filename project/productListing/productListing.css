@@ -47,13 +47,13 @@ body{
 }
 
 /* Menu */
-.menu{
+.menu {
     display: flex;
     flex-direction: column;
     background-color: #111011;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    color: #ffffff;
     height: 100vh;
     width: 960px;
     position: fixed;
@@ -64,40 +64,31 @@ body{
     transition: 0.5s;
     transform: translateX(-100%);
 }
-.menu a{
-    color: #FFFFFF;
-    font-family: 'Orelo';
-    font-size: 36px;
-    text-align: center;
-    line-height: 120px;
-    text-decoration: none;
-    cursor: pointer;
-
-}
-.menu button{
+.menu button {
     height: 120px;
     display: flex;
     align-items: center;
     background-color: transparent;
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 36px;
     text-align: center;
     cursor: pointer;
 }
-
-.menu button:hover{
-    border-bottom: solid #FFFFFF;
-    color: #FFFFFF;
+  
+.menu button:hover {
+    border-bottom: solid #ffffff;
+    color: #ffffff;
 }
-.show{
+.show {
+    display: flex;
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
-}   
-
+}
 /* FILTER */
 hr{
+    margin: 10px 0;
     color: #111011;
 }
 .nav{
@@ -122,10 +113,6 @@ hr{
     background-color: #111011;
     color: #FFFFFF;
 }
-/* The "show" class is added to the filtered elements */
-.show {
-    display: block;
-  }
 /* PRODUCT LISTING */
 .productList{
     height: 100%;
@@ -188,67 +175,170 @@ hr{
     cursor: pointer;
 }
 /* FOOTER */
-.footer{
+.footer {
+    width: 100%;
     padding: 40px 0;
     background-color: #111011;
-}
-.footer__content{
-    max-width: 1920px;
+  }
+  .footer__content {
+    max-width: 1200px;
+    margin: auto;
     box-sizing: border-box;
-    margin: 0 200px;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     gap: 30px;
-}
-.footer__content .contentLeft{
+  }
+  .footer__content .contentLeft {
     width: 32%;
-}
-.footer__content .contentLeft h3{
+  }
+  .footer__content .contentLeft h3 {
     font-size: 20px;
     line-height: 30px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 10px;
-}
-.footer__content .contentLeft ul li a{
+  }
+  .footer__content .contentLeft ul li a {
     font-size: 16px;
     line-height: 30px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
-}
-.footer__content .contentMid{
+  }
+  .footer__content .contentMid {
     width: 32%;
     text-align: center;
-}
-.footer__content .contentMid ul li a{
+  }
+  .footer__content .contentMid ul li a {
     font-size: 16px;
     line-height: 30px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
-}
-.footer__content .contentRight{
+  }
+  .footer__content .contentRight {
     width: 32%;
     text-align: right;
-}
-.footer__content .contentRight h3{
+  }
+  .footer__content .contentRight h3 {
     font-size: 20px;
     line-height: 30px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 10px;
-}
-.footer__content .contentRight ul li a{
+  }
+  .footer__content .contentRight ul li a {
     font-size: 16px;
     line-height: 30px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
-}
-.footer hr{
-    color: #FFFFFF;
+  }
+  .footer hr {
+    color: #ffffff;
     margin: 20px 0;
-}
-.copyright{
+  }
+  .copyright {
     margin-top: 10px;
     text-align: center;
+  }
+  .copyright p {
+    color: #ffffff;
+  }
+
+/*------REPONSIVE 768PX------*/
+
+/* GLOBAL */
+@media only screen and (max-width: 768px) {
+    .headText h2 {
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: 600;
+    }
+  }
+  /* HEADER */
+  @media only screen and (max-width: 768px) {
+    .header__content {
+      padding: 20px 30px;
+    }
 }
-.copyright p{
-    color: #FFFFFF;
+/* Menu */
+@media only screen and (max-width: 768px) {
+    .menu {
+      width: 100%;
+    }
+    .show{
+        display:flex;
+    }
+    .menu button {
+      font-size: 24px;
+    }
+}
+/* FILTER */
+@media only screen and (max-width: 768px) {
+    .nav {
+      padding: 0 30px;
+    }
+    
+}
+/* PRODUCT LISTING */
+@media only screen and (max-width: 768px) {
+    .productList__content {
+      margin: 0 30px;
+    }
+    .contentItem {
+      width: 48%;
+      height: 100%;
+    }
+}
+/* FOOTER */
+@media only screen and (max-width: 768px) {
+    .footer__content {
+      flex-direction: column;
+      padding: 0 20px;
+      margin: 0;
+    }
+    .footer__content .contentLeft,
+    .footer__content .contentRight,
+    .footer__content .contentMid {
+      width: 100%;
+      text-align: center;
+    }
+    .copyright {
+      padding: 0 30px;
+    }
+}
+
+/*-----REPONSIVE 576PX-----*/
+/* GLOBAL */
+@media only screen and (max-width: 576px) {
+    .body {
+      font-size: 14px;
+    }
+  }
+  
+  /* HEADER */
+@media only screen and (max-width: 576px) {
+    .header__content {
+      padding: 10px 10px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .header__content {
+      padding: 10px 10px;
+    }
+}
+/* FILTER */
+@media only screen and (max-width: 576px) {
+    .nav {
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-item button{
+        padding: 8px 24px;
+    }
+    
+}
+/* PRODUCT LISTING */
+@media only screen and (max-width: 576px) {
+    .productList__content {
+      margin: 0 20px;
+    }
 }

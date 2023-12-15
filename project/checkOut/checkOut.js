@@ -9,7 +9,7 @@ function render(){
         let total = Number(listCart[i].sl)*Number(listCart[i].item.price)
         content += `
         <tr>
-            <td class="text-left"><img src="${listCart[i].item.img[0]}" alt=""></td>
+            <td class="text-left"><img src="${listCart[i].item.img[0]}" alt="product-image"></td>
             <td class="text-left">
                 <h3>${listCart[i].item.nameProduct}</h3>
                 <p>Số lượng: ${listCart[i].sl}</p>
@@ -28,6 +28,6 @@ function render(){
 render()
 
 function order(){
-    return alert(`ĐẶT HÀNG THÀNH CÔNG!
+    alert(`ĐẶT HÀNG THÀNH CÔNG!
 Cảm ơn bạn đã lựa chọn Trâm Anh Store`)
 }
