@@ -28,6 +28,6 @@ function render(){
 render()
 
 function order(){
-    return alert(`Đặt hàng thành công! 
-Cảm ơn bạn đã lựa chọn Trâm Anh Store.`)
+    return alert(`ĐẶT HÀNG THÀNH CÔNG!
+Cảm ơn bạn đã lựa chọn Trâm Anh Store`)
 }

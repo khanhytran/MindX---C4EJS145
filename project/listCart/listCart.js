@@ -15,7 +15,6 @@ function render(){
     listCart = JSON.parse(listCartJson);
     let content="";
     for(let i=0; i<listCart.length; i++){
-        let total = Number(listCart[i].sl)*Number(listCart[i].item.price)
         content += `
         <tr>
             <td class="text-center"><img src="${listCart[i].item.img[0]}" alt=""></td>
@@ -28,19 +27,12 @@ function render(){
                     <button class="quantity-btn" onclick="increaseQuantity('${listCart[i].item.id}')">+</button>
                 </div>
             </td>
-            <td class="text-right">${(total.toFixed(3)) + 'VND'}</td>
+            <td class="text-right">${(Number(listCart[i].sl)*Number(listCart[i].item.price)).toFixed(3)  +'VND'}</td>
         </tr>
         `;
-        totalPrice += total
     }    
     let contentItem=document.querySelector(".cart-row",)
     contentItem.innerHTML=content
-
-    // QUANTITY
-    // Get the quantity input element
-    const quantityInput = document.getElementById('quantity-input');
-    document.querySelector('.total').innerHTML = listCart.length
-    document.querySelector('.total-price').innerHTML = totalPrice.toFixed(3)
 }
 
 render()
@@ -54,6 +46,7 @@ function increaseQuantity(id) {
     let jsonaddToCart=JSON.stringify(listCart)  // chuyen tu mang ve string 
     localStorage.setItem('listCart', jsonaddToCart)  // luu vao loacal storage 
     render()
+    total()
 }
 
 // Function to decrease the quantity
@@ -70,5 +63,15 @@ function decreaseQuantity(id) {
     let jsonaddToCart=JSON.stringify(listCart)  // chuyen tu mang ve string 
     localStorage.setItem('listCart', jsonaddToCart)  // luu vao loacal storage 
     render()
+    total()
 
 }
+function total(){
+    let total = 0
+    for(let i=0; i<listCart.length; i++){
+        total += Number(listCart[i].sl)*Number(listCart[i].item.price)
+    }
+    document.querySelector('.total').innerHTML = listCart.length
+    document.querySelector('.total-price').innerHTML = total.toFixed(3)
+}
+total()

@@ -64,6 +64,16 @@ body{
     transition: 0.5s;
     transform: translateX(-100%);
 }
+.menu a{
+    color: #FFFFFF;
+    font-family: 'Orelo';
+    font-size: 36px;
+    text-align: center;
+    line-height: 120px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
 .menu button{
     height: 120px;
     display: flex;
@@ -84,7 +94,7 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
-}      
+}   
 
 /* FILTER */
 hr{
@@ -112,6 +122,10 @@ hr{
     background-color: #111011;
     color: #FFFFFF;
 }
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+  }
 /* PRODUCT LISTING */
 .productList{
     height: 100%;
@@ -175,16 +189,14 @@ hr{
 }
 /* FOOTER */
 .footer{
-    width: 100%;
     padding: 40px 0;
     background-color: #111011;
 }
 .footer__content{
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1920px;
     box-sizing: border-box;
+    margin: 0 200px;
     display: flex;
-    align-items: center;
     justify-content: space-around;
     gap: 30px;
 }
@@ -239,109 +251,4 @@ hr{
 }
 .copyright p{
     color: #FFFFFF;
-}
-
-/*------REPONSIVE 768PX------*/
-
-/* GLOBAL */
-@media only screen and (max-width: 768px){
-    .headText h2{
-        font-size: 20px;
-        line-height: 40px;
-        font-weight: 600;
-    }
-}
-/* HEADER */
-@media only screen and (max-width: 768px){
-    .header__content{
-        padding: 20px 40px;
-    }
-}
-@media only screen and (max-width: 768px){
-    .menu {
-        width: 100%;
-    }
-    .menu button {
-    font-size: 24px;
-}
-}
-/* FILTER */
-@media only screen and (max-width: 768px){
-    .nav{
-        padding: 0px 40px;
-    }
-}
-
-/* PRODUCT */
-@media only screen and (max-width: 768px){
-    .productList__content{
-        padding: 0 40px;
-    }
-    .contentItem{
-        width: 31.25%;
-    }
-}
-/* FOOTER */
-@media only screen and (max-width: 768px){
-    .footer__content{
-        flex-direction: column;
-        padding: 0 20px;
-    }
-    .footer__content .contentLeft, .footer__content .contentRight, .footer__content .contentMid {
-        width: 100%;
-        text-align: center;
-    }
-    .copyright{
-        padding: 0 30px;
-    }
-}
-/*-----REPONSIVE 576PX-----*/
-/* GLOBAL */
-@media only screen and (max-width: 576px){
-    .body{
-        font-size: 14px;
-    }
-}
-
-/* HEADER */
-@media only screen and (max-width: 576px){
-    .header__content{
-        padding: 10px 10px;
-    }
-    .header__content ul{
-        margin: 0;
-    }
-    .hr{
-        margin: 0;
-    }
-
-}
-/* FILTER */
-@media only screen and (max-width: 576px){
-    .nav{
-        padding: 0px 20px;
-        justify-content: space-around;
-    }
-    .nav-item button{
-        padding: 10px 24px;
-        font-size: 20px;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        color: #111011;
-    }
-    
-}
-/* PRODUCT LISTING */
-@media only screen and (max-width: 576px){
-    .productList__content{
-        padding: 0 20px;
-        gap: 10px;
-        justify-content: space-around;
-    }
-    .contentItem{
-        margin-top: 20px;
-        width: 48%;
-    }
-    
 }

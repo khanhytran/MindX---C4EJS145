@@ -233,25 +233,3 @@ body{
 .copyright p{
     color: #FFFFFF;
 }
-
-/*------REPONSIVE 768PX------*/
-
-/* GLOBAL */
-@media only screen and (max-width: 768px){
-    .headText h2{
-        font-size: 20px;
-        line-height: 40px;
-        font-weight: 600;
-    }
-}
-/* HEADER */
-@media only screen and (max-width: 768px){
-    .header__content{
-        padding: 20px 40px;
-    }
-}
-@media only screen and (max-width: 768px){
-    .menu {
-        width: 100%;
-    }
-}

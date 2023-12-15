@@ -12,7 +12,7 @@ for(let i=0; i<dataProduct.length; i++){
             <p>${dataProduct[i].nameProduct}</p>
             <p class="price">${dataProduct[i].price + 'VND'}</p>
         </a>
-        <button onclick="addToCart(${i})" class="btn">Add to cart</button>
+        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Add to cart</button>
     </div>
     `
 }    
@@ -31,7 +31,7 @@ for(let i=0; i<dataProduct.length; i++){
             <p>${dataProduct[i].nameProduct}</p>
             <p class="price">${dataProduct[i].price + 'VND'}</p>
         </a>
-        <button onclick="addToCart(${i})" class="btn">Add to cart</button>
+        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Add to cart</button>
     </div>
     `
     }
@@ -51,7 +51,7 @@ for(let i=0; i<dataProduct.length; i++){
             <p>${dataProduct[i].nameProduct}</p>
             <p class="price">${dataProduct[i].price + 'VND'}</p>
         </a>
-        <button onclick="addToCart(${i})" class="btn">Add to cart</button>
+        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Add to cart</button>
     </div>
     `
     }
@@ -73,37 +73,44 @@ function detailItem(i){
     localStorage.setItem('detailProduct', JSON.stringify(dataProduct[i]))
 }
 // ADD TO CART
-let listCart = []
+// dòng này để reset local
+// let listCart = []
 
-function addToCart(i){
-    let flag = false
-    let index=-1
-    console.log(listCart)
-    for (let j=0; j<listCart.length; j++){
-        if(dataProduct[i].id == dataProduct[j].id){
-            flag=true
-            index=j
-        }
+function addToCart(id){
+    let listCart
+    if(localStorage.getItem("listCart") == null){
+        listCart = []
     }
+    else{
+        listCart = JSON.parse(localStorage.getItem("listCart"))
+    }
+    let item = dataProduct.find(dataItem => {
+        return dataItem.id == id
+    })
+    let indexItem = listCart.findIndex(dataItem =>{
+        return dataItem.item.id == id
+    })
     // check
-    if(flag){
-        listCart[index].sl++
+    if(indexItem != -1){
+        listCart[indexItem].sl++
     }else{
         let cartitem={
             sl:1,
-            item: dataProduct[i]
+            item: item
         }
         listCart.push(cartitem)
-        alert("Đã thêm sản phẩm vào giỏ hàng!")
+        alert('Đã thêm sản phẩm vào giỏ hàng')
     }
-
     console.log(listCart)
     let jsonaddToCart=JSON.stringify(listCart)  // chuyen tu mang ve string 
     localStorage.setItem('listCart', jsonaddToCart)  // luu vao loacal storage 
-
-    // Show listCart:
+    showCart()
+}
+// Show listCart:
+function showCart(){
     let listCartJson = localStorage.getItem("listCart");
     listCart = JSON.parse(listCartJson);
 
     document.querySelector('.total').innerHTML = listCart.length
 }
+showCart()
