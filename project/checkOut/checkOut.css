@@ -19,7 +19,6 @@ body{
 /* FORM */
 .checkoutForm__content{
     background-color: #FFFFFF;
-    width: 100%;
     padding: 40px 300px;
     margin: auto;
     box-sizing: border-box;
@@ -36,11 +35,10 @@ body{
     width: 100%;
     padding: 20px 0;
     display: flex;
-    gap: 40px;
 }
 .form{
     width: 100%;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 .delivery{
     width: 100%;
@@ -49,14 +47,16 @@ body{
     font-size: 18px;
     margin: 20px 0;
 }
+
 input[type=text] {
     width: 100%;
     margin-bottom: 20px;
     padding: 16px;
+    box-sizing: border-box;
     background-color: #f3f3f3;
     border: 1px solid #d7d7d7;
     border-radius: 3px;
-  }
+}
 .btn{ 
     background-color: #FFFFFF;
     border: 1px solid gray;
@@ -121,10 +121,51 @@ input[type="radio"] {
 }
 .text-left{
     text-align: left;
+    padding-right: 10px;
 }
 .cart-header tr th{
     font-size: 20px;
     font-weight: 600;
     padding-bottom: 20px;
     text-align: left;
+}
+
+/*------REPONSIVE 768PX------*/
+/* FORM */
+@media only screen and (max-width: 768px) {
+    .checkoutForm__content{
+        padding: 20px 30px;
+    }
+    .deliveryForm{
+        padding: 0;
+        display: block;
+    }
+    .form{
+        padding-right: 0;
+    }
+
+}
+
+/* PRODUCT INFO */
+@media only screen and (max-width: 768px) {
+    .info{
+        display: none;
+    }
+}
+
+/*------REPONSIVE 576PX------*/
+/* GLOBAL */
+@media only screen and (max-width: 576px) {
+    .body {
+        font-size: 14px;
+    }
+    h2{
+        font-size: 20px;
+    }
+  }
+/* FORM */
+@media only screen and (max-width: 576px) {
+    .checkoutForm__content{
+        padding: 10px 10px;
+    }
 }
