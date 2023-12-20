@@ -30,10 +30,13 @@ let info = `
         <p class="price">${Number(detailItem.price) + "VND"}</p>
         <hr>
         <p>${detailItem.describe}</p>
+        <button>${detailItem.size[0]}</button>
+        <button>${detailItem.size[1]}</button>
+        <button>${detailItem.size[2]}</button>
+        <button>${detailItem.size[3]}</button>
         <hr>
-        <p>SKU: ${detailItem.SKU}</p>
+        <p>SKU: ${detailItem.id}</p>
         <p>Category: ${detailItem.category}</p>
-        <p>Tags: ${detailItem.tags}</p>
         <button onclick="addToCart('${
           detailItem.id
         }')" class="btn">Add to Cart</button>
