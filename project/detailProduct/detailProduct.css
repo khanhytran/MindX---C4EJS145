@@ -147,7 +147,7 @@ body{
     font-size: 16px;
     margin-top: 10px;
 }
-.info button{
+.btn-add{
     width: 200px;
     border: none;
     background-color: #111011;
@@ -156,6 +156,23 @@ body{
     padding: 15px 20px;
     margin-top: 15px;
     cursor: pointer;
+}
+.btn-size{
+    width: 48px;
+    height: 48px;
+    background-color: #FFFFFF;
+    border-radius: 0;
+    border: 1px solid gray;
+    margin-top: 15px;
+    transition: 1s;
+    cursor: pointer;
+}
+.btn-size.active{
+    background-color: #111011;
+    color: #FFFFFF;
+}
+.size{
+    margin-bottom: 20px;
 }
 /* RECOMMEND ITEM */
 .recommendItem{

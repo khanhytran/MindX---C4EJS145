@@ -30,57 +30,71 @@ let info = `
         <p class="price">${Number(detailItem.price) + "VND"}</p>
         <hr>
         <p>${detailItem.describe}</p>
-        <button>${detailItem.size[0]}</button>
-        <button>${detailItem.size[1]}</button>
-        <button>${detailItem.size[2]}</button>
-        <button>${detailItem.size[3]}</button>
+        <h4>Choose size: </h4>
+        <div class="size">
+          <button class="btn-size active" name="size" onclick="changeSize(this)">${detailItem.size[0]}</button>
+          <button class="btn-size" name="size" onclick="changeSize(this)">${detailItem.size[1]}</button>
+          <button class="btn-size" name="size" onclick="changeSize(this)">${detailItem.size[2]}</button>
+          <button class="btn-size" name="size" onclick="changeSize(this)">${detailItem.size[3]}</button>
+          <button class="btn-size" name="size" onclick="changeSize(this)">${detailItem.size[4]}</button>
+        </div>
         <hr>
         <p>SKU: ${detailItem.id}</p>
         <p>Category: ${detailItem.category}</p>
+        <p>Share</p>
+        <span>
         <button onclick="addToCart('${
           detailItem.id
-        }')" class="btn">Add to Cart</button>
+        }')" class="btn-add">Add to Cart</button>
     </div> 
     `;
 let productInfo = document.querySelector(".productInfo");
 productInfo.innerHTML = info;
 
+// CHANGE SIZE:
+function changeSize(button) {
+  // Lấy tất cả các nút trong phần size
+  let sizeButtons = document.querySelectorAll('.size button');
+
+  // Xóa lớp active từ tất cả các nút
+  sizeButtons.forEach(btn => {
+      btn.classList.remove('active');
+  });
+
+  // Thêm lớp active cho nút được click
+  button.classList.add('active');
+}
 
 // ADD TO CART
 
-function addToCart(i) {
-    let listCart
-    if(JSON.parse(localStorage.getItem("listCart")).length!=0){
-       listCart = JSON.parse(localStorage.getItem("listCart"))
-    }
-    else{
-        listCart = 0
-    }
-    console.log(listCart)
-  let item1 = products.find((it) => {
-    return it.id == i;
-  });
-  let flag = false;
-  let index = -1;
-  for (let j = 0; j < listCart.length; j++) {
-    if (listCart[j].item.id == i) {
-      flag = true;
-      index = j;
-    }
+function addToCart(id){
+  let listCart
+  if(localStorage.getItem("listCart") == null){
+      listCart = []
   }
-  if (flag) {
-    listCart[index].sl++;
-  } else {
-    let cartitem = {
-      sl: 1,
-      item: item1,
-    };
-    listCart.push(cartitem);
-    alert('Đã thêm sản phẩm vào giỏ hàng!')
+  else{
+      listCart = JSON.parse(localStorage.getItem("listCart"))
   }
-  let jsonaddToCart = JSON.stringify(listCart); // chuyen tu mang ve string
-  localStorage.setItem("listCart", jsonaddToCart); // luu vao loacal storage
-
+  let item = dataProduct.find(dataItem => {
+      return dataItem.id == id
+  })
+  let indexItem = listCart.findIndex(dataItem =>{
+      return dataItem.item.id == id
+  })
+  // check
+  if(indexItem != -1){
+      listCart[indexItem].sl++
+  }else{
+      let cartitem={
+          sl:1,
+          item: item
+      }
+      listCart.push(cartitem)
+      alert('Đã thêm sản phẩm vào giỏ hàng')
+  }
+  console.log(listCart)
+  let jsonaddToCart=JSON.stringify(listCart)  // chuyen tu mang ve string 
+  localStorage.setItem('listCart', jsonaddToCart)  // luu vao loacal storage 
   showCart()
 }
 

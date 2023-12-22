@@ -106,6 +106,7 @@ input[type="radio"] {
 }
 .cart-row tr td h3{
     font-size: 16px;
+    margin-bottom: 10px
 }
 .totalPrice{
     margin-top: 20px;
