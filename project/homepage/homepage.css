@@ -18,6 +18,9 @@ body {
   color: #111011;
   text-align: center;
 }
+.headText p{
+  color: gray;
+}
 /* TRASACTION FROM BOTTOM */
 .bottomLoad {
   height: 100%;
@@ -263,9 +266,37 @@ body {
 .overlaycol1 img {
   width: 150px;
 }
+/* SALE DECOR */
+.sale-decor{
+  background-color: #111011;
+  color: #ffffff;
+}
+.sale-decor__content{
+  margin: 40px 0;
+  padding: 40px 0;
+  text-transform: uppercase;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: myfirst 5s linear 2s infinite alternate;
+}
+@keyframes myfirst {
+  0%   {left:0px; top:0px;}
+  100% {left:200px; top:0px;}
+}
+.fill-text{
+  color: #ffffff;
+  -webkit-text-fill-color: #111011;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+    margin: 0 10px;
+}
+.normal-text{
+  color: #ffffff;
+}
 /* COLLECTION 2 */
 .collection2 {
-  padding-top: 100px;
   background-color: #ffffff;
 }
 .collection2__content {
@@ -381,6 +412,20 @@ body {
   background-color: #111011;
   color: #ffffff;
   cursor: pointer;
+}
+/* SIGN UP NEWS */
+.signup__content{
+  padding: 80px 0;
+  text-align: center;
+}
+input[type=text] {
+  width: 400px;
+  margin-top: 40px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
 }
 /* FOOTER */
 .footer {
@@ -662,7 +707,7 @@ body {
   animation: rotate 5s infinite linear;
 }
 .addContent{
-  background-color: black;
+  background-color: #111011;
 
 }
 .add {
