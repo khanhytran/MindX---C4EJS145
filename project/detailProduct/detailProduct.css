@@ -101,6 +101,9 @@ body{
     transform: translateX(0);
 } 
 /* PRODUCT DETAIL */
+.detailProduct {
+    padding: 40px 200px; 
+}
 .detailProduct_content{   
     max-width: 1200px; 
     margin: auto; 
@@ -235,6 +238,7 @@ body{
 }
 .footer__content {
     max-width: 1200px;
+    padding: 0 200px;
     margin: auto;
     box-sizing: border-box;
     display: flex;
@@ -288,7 +292,7 @@ body{
     margin: 20px 0;
 }
 .copyright {
-    margin-top: 10px;
+    padding: 10px 200px;
     text-align: center;
 }
 .copyright p {

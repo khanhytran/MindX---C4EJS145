@@ -19,7 +19,7 @@ body{
 /* FORM */
 .checkoutForm__content{
     background-color: #FFFFFF;
-    padding: 40px 100px;
+    padding: 40px 200px;
     margin: auto;
     box-sizing: border-box;
 }
@@ -91,7 +91,7 @@ input[type="radio"] {
 
 /* PRODUCT INFO */
 .info{
-    width: 40%;
+    width: 60%;
     height: 100%;
     border: 1px solid #111011;
     padding: 20px;

@@ -27,7 +27,7 @@ function render(){
                     <button class="quantity-btn" onclick="increaseQuantity('${listCart[i].item.id}')">+</button>
                 </div>
             </td>
-            <td class="text-right">${(Number(listCart[i].sl)*Number(listCart[i].item.price)).toFixed(3)  +'VND'}</td>
+            <td class="text-right">${(Number(listCart[i].sl)*Number(listCart[i].item.price)).toLocaleString('en-US', { minimumFractionDigits: 3 })  +'VND'}</td>
         </tr>
         `;
     }    
@@ -66,12 +66,17 @@ function decreaseQuantity(id) {
     total()
 
 }
-function total(){
-    let total = 0
-    for(let i=0; i<listCart.length; i++){
-        total += Number(listCart[i].sl)*Number(listCart[i].item.price)
+function total() {
+    let total = 0;
+    for (let i = 0; i < listCart.length; i++) {
+        total += Number(listCart[i].sl) * Number(listCart[i].item.price);
     }
-    document.querySelector('.total').innerHTML = listCart.length
-    document.querySelector('.total-price').innerHTML = total.toFixed(3)
+    
+    // Định dạng số với dấu chấm phẩy giữa hàng nghìn
+    const formattedTotal = total.toLocaleString('en-US', { minimumFractionDigits: 3 }) + 'VND';
+
+    document.querySelector('.total').innerHTML = listCart.length;
+    document.querySelector('.total-price').innerHTML = formattedTotal;
 }
-total()
+
+total();

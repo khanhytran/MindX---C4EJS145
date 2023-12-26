@@ -30,7 +30,7 @@ let info = `
         <p class="price">${Number(detailItem.price) + "VND"}</p>
         <hr>
         <p>${detailItem.describe}</p>
-        <h4>Choose size: </h4>
+        <h4>Chọn kích thước: </h4>
         <div class="size">
           <button class="btn-size active" name="size" onclick="changeSize(this)">${detailItem.size[0]}</button>
           <button class="btn-size" name="size" onclick="changeSize(this)">${detailItem.size[1]}</button>
@@ -45,7 +45,7 @@ let info = `
         <span>
         <button onclick="addToCart('${
           detailItem.id
-        }')" class="btn-add">Add to Cart</button>
+        }')" class="btn-add">Thêm vào giỏ hàng</button>
     </div> 
     `;
 let productInfo = document.querySelector(".productInfo");

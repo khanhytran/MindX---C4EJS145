@@ -12,7 +12,7 @@ for(let i=0; i<dataProduct.length; i++){
             <p>${dataProduct[i].nameProduct}</p>
             <p class="price">${dataProduct[i].price + 'VND'}</p>
         </a>
-        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Add to cart</button>
+        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Thêm vào giỏ hàng</button>
     </div>
     `
 }    
@@ -31,7 +31,7 @@ for(let i=0; i<dataProduct.length; i++){
             <p>${dataProduct[i].nameProduct}</p>
             <p class="price">${dataProduct[i].price + 'VND'}</p>
         </a>
-        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Add to cart</button>
+        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Thêm vào giỏ hàng</button>
     </div>
     `
     }
@@ -51,7 +51,7 @@ for(let i=0; i<dataProduct.length; i++){
             <p>${dataProduct[i].nameProduct}</p>
             <p class="price">${dataProduct[i].price + 'VND'}</p>
         </a>
-        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Add to cart</button>
+        <button onclick="addToCart('${dataProduct[i].id}')" class="btn">Thêm vào giỏ hàng</button>
     </div>
     `
     }

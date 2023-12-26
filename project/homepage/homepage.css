@@ -136,7 +136,6 @@ body {
   background-color: transparent;
   padding: 10px 0;
   color: #ffffff;
-  border-radius: 3px;
   border: #ffffff 1px solid;
   cursor: pointer;
 }
@@ -602,7 +601,7 @@ input[type=text] {
   margin: 20px 0;
 }
 .copyright {
-  margin-top: 10px;
+  padding: 10px 200px;
   text-align: center;
 }
 .copyright p {

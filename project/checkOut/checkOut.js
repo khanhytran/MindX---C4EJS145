@@ -14,7 +14,7 @@ function render(){
                 <h3>${listCart[i].item.nameProduct}</h3>
                 <p>Số lượng: ${listCart[i].sl}</p>
             </td>
-            <td class="text-right">${(total.toFixed(3)) + 'VND'}</td>
+            <td class="text-right">${(total.toLocaleString('en-US', { minimumFractionDigits: 3 })) + 'VND'}</td>
         </tr>
         `;
         totalPrice += total
@@ -22,7 +22,7 @@ function render(){
     let contentItem=document.querySelector(".cart-row",)
     contentItem.innerHTML=content
 
-    document.querySelector('.total-price').innerHTML = totalPrice.toFixed(3)
+    document.querySelector('.total-price').innerHTML = totalPrice.toLocaleString('en-US', { minimumFractionDigits: 3 })
 }
 
 render()
@@ -32,23 +32,26 @@ function getOrderInfo() {
     const name = document.querySelector('.delivery input[name="name"]').value;
     const phoneNumber = document.querySelector('.delivery input[name="phone"]').value;
     const address = document.querySelector('.delivery input[name="address"]').value;
+    const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+
 
     // Tạo đối tượng thông tin order
     const orderInfo = {
         name: name,
         phoneNumber: phoneNumber,
         address: address,
+        paymentMethod: paymentMethod
     };
 
     // Tạo đối tượng order list từ listCart
     const orderList = listCart.map(item => ({
         nameProduct: item.item.nameProduct,
         quantity: item.sl,
-        totalPrice: (item.sl * item.item.price).toFixed(3) + 'VND'
+        totalPrice: (item.sl * item.item.price).toLocaleString('en-US', { minimumFractionDigits: 3 }) + 'VND'
     }));
 
     // Log thông tin order và order list ra console
-    console.log('Thông tin Order:', orderInfo);
+    console.log('Thông tin khách:', orderInfo);
     console.log('Order List:', orderList);
 }
 

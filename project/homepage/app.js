@@ -28,7 +28,7 @@ for (let i = 0; i < trendingProducts.length; i++) {
             <p>${trendingProducts[i].nameProduct}</p>
             <p class="price">${trendingProducts[i].price + "VND"}</p>
         </a>
-        <button onclick="addToCart(${trendingProducts[i].id})" class="btn">Add to cart</button>
+        <button onclick="addToCart('${trendingProducts[i].id}')" class="btn">Thêm vào giỏ hàng</button>
     </div>
     `;
 }

@@ -198,6 +198,9 @@ hr{
     color: #ffffff;
     margin-bottom: 10px;
   }
+  .footer__content .contentLeft ul{
+    padding: 0;
+  }
   .footer__content .contentLeft ul li a {
     font-size: 16px;
     line-height: 30px;
