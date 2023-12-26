@@ -272,18 +272,13 @@ body {
   color: #ffffff;
 }
 .sale-decor__content{
-  margin: 40px 0;
   padding: 40px 0;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 36px;
   display: flex;
   justify-content: center;
   position: relative;
   animation: myfirst 5s linear 2s infinite alternate;
-}
-@keyframes myfirst {
-  0%   {left:0px; top:0px;}
-  100% {left:200px; top:0px;}
 }
 .fill-text{
   color: #ffffff;
@@ -354,6 +349,125 @@ body {
 .collection2__content .bottomLoad img {
   width: 100%;
 }
+/* Add content */
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: lightblue;
+  position: relative;
+  animation: rotate 5s infinite linear;
+}
+.addContent{
+  background-color: #111011;
+}
+.add {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  max-width: 1200px;
+  margin: auto;
+}
+.addLeft {
+  width: 50%;
+  position: relative;
+}
+.img1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translatey(-50%);
+  width: 120px;
+}
+.circle-container {
+  width: 350px; /* Đổi kích thước container tùy ý */
+  height: 350px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translatey(-50%);
+}
+
+#rotateImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Để tạo hình tròn */
+  animation: rotateCircle 25s linear infinite; /* Đổi thời gian và kiểu easing tùy ý */
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.circle-container2 {
+  width: 450px; /* Đổi kích thước container tùy ý */
+  height: 450px;
+  overflow:hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translatey(-50%);
+}
+
+#rotateImage2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Để tạo hình tròn */
+  animation: rotateCircle2 25s linear infinite; /* Đổi thời gian và kiểu easing tùy ý */
+}
+
+@keyframes rotateCircle2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.addright {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  box-sizing: border-box;
+}
+.addright p:first-child{
+    color: rgb(248, 159, 174);
+
+}
+.addright p{
+    color: white;
+    line-height: 30px;
+
+}
+.addright h4{
+    color: white;
+    font-size: 40px;
+    padding: 10px 0;
+}
+/* typing */
+
+.typing-container {
+  border-right: 2px solid #000;
+  /* white-space: nowrap; */
+  animation: typing 3s steps(30, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30em;
+  }
+}
 /* POPULAR PRODUCT LISTING */
 .trendProduct {
   padding: 160px 0;
@@ -415,7 +529,7 @@ body {
 }
 /* SIGN UP NEWS */
 .signup__content{
-  padding: 80px 0;
+  padding: 80px 30px;
   text-align: center;
 }
 input[type=text] {
@@ -545,7 +659,7 @@ input[type=text] {
     width: 100%;
   }
   .collection1__content .headText img {
-    width: 200px;
+    width: 100%;
     margin: 10px 0;
   }
   .cover {
@@ -561,12 +675,6 @@ input[type=text] {
 }
 /* COLLECTION 2 */
 @media only screen and (max-width: 768px) {
-  .collection2 {
-    padding-top: 20px;
-  }
-  .collection2__content .headText {
-    padding: 10px 30px;
-  }
   .bottomLoad img {
     width: 300px;
     height: 100%;
@@ -689,7 +797,7 @@ input[type=text] {
   }
 }
 /* TRENDING PRODUCT */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   .trendProduct {
     padding: 20px 0;
   }
@@ -697,123 +805,14 @@ input[type=text] {
     margin: 0 20px;
   }
 }
-
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: lightblue;
-  position: relative;
-  animation: rotate 5s infinite linear;
-}
-.addContent{
-  background-color: #111011;
-
-}
-.add {
-  display: flex;
-  width: 100%;
-  height: 700px;
-  max-width: 1200px;
-  margin: auto;
-}
-.addLeft {
-  width: 50%;
-  position: relative;
-}
-.img1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translatey(-50%);
-  width: 180px;
-}
-.circle-container {
-  width: 450px; /* Đổi kích thước container tùy ý */
-  height: 450px;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translatey(-50%);
-}
-
-#rotateImage {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%; /* Để tạo hình tròn */
-  animation: rotateCircle 25s linear infinite; /* Đổi thời gian và kiểu easing tùy ý */
-}
-
-@keyframes rotateCircle {
-  0% {
-    transform: rotate(0deg);
+/* Add content */
+@media only screen and (max-width: 576px) {
+  .addright {
+    padding: 20px;
   }
-  100% {
-    transform: rotate(360deg);
-  }
+  .addright h4{
+    font-size: 30px;
 }
-.circle-container2 {
-  width: 600px; /* Đổi kích thước container tùy ý */
-  height: 600px;
-  overflow:hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translatey(-50%);
 }
 
-#rotateImage2 {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%; /* Để tạo hình tròn */
-  animation: rotateCircle2 25s linear infinite; /* Đổi thời gian và kiểu easing tùy ý */
-}
 
-@keyframes rotateCircle2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-.addright {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 100px;
-  box-sizing: border-box;
-}
-.addright p:first-child{
-    color: rgb(248, 159, 174);
-
-}
-.addright p{
-    color: white;
-    line-height: 30px;
-
-}
-.addright h4{
-    color: white;
-    font-size: 40px;
-    padding: 10px 0;
-}
-/* typing */
-
-.typing-container {
-  border-right: 2px solid #000;
-  /* white-space: nowrap; */
-  animation: typing 3s steps(30, end);
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 30em;
-  }
-}
