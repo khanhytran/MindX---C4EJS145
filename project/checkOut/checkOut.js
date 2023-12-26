@@ -27,7 +27,42 @@ function render(){
 
 render()
 
+function getOrderInfo() {
+    // Lấy thông tin từ các ô input trong form
+    const name = document.querySelector('.delivery input[name="name"]').value;
+    const phoneNumber = document.querySelector('.delivery input[name="phone"]').value;
+    const address = document.querySelector('.delivery input[name="address"]').value;
+
+    // Tạo đối tượng thông tin order
+    const orderInfo = {
+        name: name,
+        phoneNumber: phoneNumber,
+        address: address,
+    };
+
+    // Tạo đối tượng order list từ listCart
+    const orderList = listCart.map(item => ({
+        nameProduct: item.item.nameProduct,
+        quantity: item.sl,
+        totalPrice: (item.sl * item.item.price).toFixed(3) + 'VND'
+    }));
+
+    // Log thông tin order và order list ra console
+    console.log('Thông tin Order:', orderInfo);
+    console.log('Order List:', orderList);
+}
+
 function order(){
+    // Lấy thông tin order và order list
+    getOrderInfo();
+
+    // Reset listCart và totalPrice
+    listCart = [];
+    totalPrice = 0;
+
+    // Lưu listCart vào local storage
+    localStorage.setItem('listCart', JSON.stringify(listCart));
+
     alert(`ĐẶT HÀNG THÀNH CÔNG!
 Cảm ơn bạn đã lựa chọn Trâm Anh Store`)
 }

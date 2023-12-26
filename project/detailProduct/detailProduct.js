@@ -14,7 +14,7 @@ let imageList = document.querySelector(".imageList");
 imageList.innerHTML = content;
 
 let imageMain = document.querySelector(".imgShow");
-imageMain.innerHTML = `<img src="${detailItem.img[1]}" class="imgMain" alt="product-image">`
+imageMain.innerHTML = `<img src="${detailItem.img[0]}" class="imgMain" alt="product-image">`
 // imageMain.src=detailItem.img[1]
 
 // change img:
