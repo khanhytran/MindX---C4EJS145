@@ -169,9 +169,9 @@ body{
     width: 100%;
     padding: 40px 0;
     background-color: #111011;
-    /* position: fixed;
+    position: fixed;
     bottom: 0;
-    left: 0; */
+    left: 0;
   }
   .footer__content {
     max-width: 1200px;

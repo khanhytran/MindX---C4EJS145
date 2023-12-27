@@ -40,7 +40,8 @@ let info = `
         </div>
         <hr>
         <p>SKU: ${detailItem.id}</p>
-        <p>Category: ${detailItem.category}</p>
+        <p>Bộ sưu tập: ${detailItem.collection}</p>
+        <p>Thể loại: ${detailItem.category}</p>
         <p>Share</p>
         <span>
         <button onclick="addToCart('${

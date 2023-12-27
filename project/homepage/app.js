@@ -22,7 +22,7 @@ let content = "";
 for (let i = 0; i < trendingProducts.length; i++) {
   content += `
     <div onclick='detailItem(${i})' class="contentItem">
-        <a href="../detailProduct/detailProduct.html" target="_blank">
+        <a href="../detailProduct/detailProduct.html">
             <img src="${trendingProducts[i].img[1]}" alt="">
             <p class="collection">${trendingProducts[i].collection}</p>
             <p>${trendingProducts[i].nameProduct}</p>

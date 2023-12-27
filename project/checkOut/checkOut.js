@@ -66,6 +66,8 @@ function order(){
     // Lưu listCart vào local storage
     localStorage.setItem('listCart', JSON.stringify(listCart));
 
+
     alert(`ĐẶT HÀNG THÀNH CÔNG!
 Cảm ơn bạn đã lựa chọn Trâm Anh Store`)
+    render()
 }
